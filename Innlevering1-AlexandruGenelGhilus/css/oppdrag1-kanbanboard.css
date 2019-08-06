@@ -1,0 +1,132 @@
+html,
+body {
+    width: 100%;
+    background-color: #0074D9;
+    font-family: 'Open Sans', sans-serif;
+}
+
+
+
+h1 {
+    margin: 2rem;
+    width: 190px;
+    color: #FFFF;
+    font-size: 1.7rem;
+    font-weight: 600;
+}
+
+#container {
+    position: relative;
+    margin: 0 auto;
+    margin-top: 3rem;
+    width: 80%;
+    padding: 2rem;
+    text-align: center;
+    background-color: #FFFF;
+    border-radius: 20px;
+    overflow: auto;
+}
+
+.tab {
+    position: relative;
+    width: 400px;
+    max-width: 400px;
+    height: 700px;
+    background-color: #FFFF;
+    border-radius: 20px;
+    border: 1px solid #0001;
+}
+
+#to-do {
+    float: left;
+}
+
+#in-progress {
+    margin: 0 auto;
+}
+
+#done {
+    float: right;
+}
+
+h2 {
+    position: relative;
+    margin-top: 1rem;
+    color: #0008;
+    font-size: 1.3rem;
+    font-weight: 600;
+}
+
+.comments p {
+    text-overflow: ellipsis;
+    background-color: #FFFF;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    line-height: normal;
+}
+
+.comments {
+    position: relative;
+    margin-top: 2rem;
+    position: relative;
+    width: 250px;
+    display: inline-block;
+    border: 1px solid #0001;
+    border-radius: 20px;
+}
+
+.comment-button {
+    float: left;
+    width: 20px;
+    height: 20px;
+    margin-right: 7px;
+    background-color: #8777D9;
+    border-radius: 20px;
+}
+
+.tab-content {
+    width: 300px;
+    max-width: 300px;
+    height: 500px;
+    margin: 0 auto;
+    margin-top: 2rem;
+    overflow: auto;
+}
+
+.tab-content p {
+    text-align: left;
+    font-size: 0.9rem;
+    user-select: none;
+    margin-left: 50px;
+}
+
+.tab-element {
+    padding: 0.5rem;
+    margin-bottom: 5px;
+    margin-right: 5px;
+    line-height: normal;
+    border: 3px solid #00B8D9;
+    border-radius: 10px;
+}
+
+.priority {
+    float: left;
+    width: 30px;
+    height: 30px;
+    background-color: #00B8D9;
+    border-radius: 5px;
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #0074D9;
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #0064D9;
+}

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <title>Oppdrag 1 - Kanban Board</title>
+    <meta charset="UTF-8">
+    <meta name="description" content="Mappe1 - Oppdrag1">
+    <meta name="keywords" content="HTML, CSS, JavaScript">
+    <meta name="author" content="Alexandru Genel Ghilus">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="reset/reset.css">
+    <link rel="stylesheet" type="text/css" href="css/oppdrag1-kanbanboard.css">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <h1>Kanban Board</h1>
+    <div id="container">
+        <div id="to-do" class="tab">
+            <h2>To do</h2>
+            <div id="to-do-comments" class="comments">
+                <div class="comment-button"></div>
+                <p></p>
+            </div>
+            <div id="to-doo" class="tab-content">
+                <div class="tab-element">
+                    <div class="priority"></div>
+                    <p>This element is up for grabs it is not easy</p>
+                </div>
+            </div>
+        </div>
+
+        <div id="done" class="tab">
+            <h2>Done</h2>
+            <div id="done-comments" class="comments">
+                <div class="comment-button"></div>
+                <p></p>
+            </div>
+            <div class="tab-content">
+                <div class="tab-element">
+                    <div class="priority"></div>
+                    <p>This element has just been completed and it was not easy</p>
+                </div>
+            </div>
+        </div>
+
+        <div id="in-progress" class="tab">
+            <h2>In progress</h2>
+            <div id="in-progress-comments" class="comments">
+                <div class="comment-button"></div>
+                <p></p>
+            </div>
+            <div class="tab-content">
+                <div class="tab-element">
+                    <div class="priority"></div>
+                    <p>This element is in progress it is not easy</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="scripts/jquery-3.4.1.min.js"></script>
+    <script src="scripts/jquery-ui-1.12.1/jquery-ui.js"></script>
+    <script src="scripts/oppdrag1-kanbanboard.js"></script>
+</body>
+
+</html>
