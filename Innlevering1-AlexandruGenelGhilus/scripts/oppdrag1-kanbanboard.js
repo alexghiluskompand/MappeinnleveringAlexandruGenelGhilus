@@ -1,14 +1,4 @@
 $(function () {
-    /// Draggable tab-elements
-
-    $(".tab-content").sortable({
-        revert: true
-    });
-    $(".tab-element").draggable({
-        connectToSortable: ".tab-content",
-        scroll: "false"
-    });
-    $(".tab-content").droppable();
 
     ///Add tab elements (tasks)
 
@@ -38,6 +28,9 @@ $(function () {
                 "<p>" + userInput + "</p>" +
                 "</div>"
             )
+
+            /// Draggable tab-elements
+
             $(".tab-content").sortable({
                 revert: true
             });
@@ -45,8 +38,6 @@ $(function () {
                 connectToSortable: ".tab-content"
             });
             $(".tab-content").droppable();
-
-            ;
 
             $("#create-task").css("display", "none");
         });

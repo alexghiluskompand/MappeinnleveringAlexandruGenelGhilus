@@ -24,7 +24,6 @@ h1 {
     text-align: center;
     background-color: #FFFF;
     border-radius: 20px;
-    overflow: auto;
 }
 
 .tab {
@@ -107,8 +106,19 @@ h2 {
     margin-bottom: 5px;
     margin-right: 5px;
     line-height: normal;
-    border: 3px solid #00B8D9;
     border-radius: 10px;
+}
+
+#to-do .tab-element {
+    border: 3px solid #00B8D9;
+}
+
+#in-progress .tab-element {
+    border: 3px solid #FFAB00;
+}
+
+#done .tab-element {
+    border: 3px solid #57D9A3;
 }
 
 .priority {
@@ -137,7 +147,7 @@ h2 {
     display: block;
     margin: 0 auto;
     margin-top: 20px;
-    height: 30px; 
+    height: 30px;
     width: 30px;
     background: url(../images/plus.png);
     background-repeat: no-repeat;
