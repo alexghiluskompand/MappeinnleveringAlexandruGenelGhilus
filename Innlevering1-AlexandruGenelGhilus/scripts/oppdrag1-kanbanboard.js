@@ -21,18 +21,29 @@ $(function () {
         $("#confirm-task").click(function () {
 
             var userInput = $("#task-input").val();
+            
+            var setContent = function(input) {
+                var content = "<div class='tab-element'>" +
+                    "<div class='priority'></div>" +
+                    "<p>" + input + "</p>" +
+                    "</div>";
+                return content;
+            }
 
-            $("#to-do-content").append(
-                "<div class='tab-element'>" +
-                "<div class='priority'></div>" +
-                "<p>" + userInput + "</p>" +
-                "</div>"
-            )
+            if (userInput == "") {
+                $("#to-do-content").append(setContent("Empty task"))
+            } else {
+                $("#to-do-content").append(setContent(userInput));
+            };
+
 
             /// Draggable tab-elements
 
             $(".tab-content").sortable({
-                revert: true
+                revert: true,
+                helper: "clone",
+                appendTo: 'body',
+                scroll: false,
             });
             $(".tab-element").draggable({
                 connectToSortable: ".tab-content"
