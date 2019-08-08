@@ -9,8 +9,29 @@ footer {
     bottom: 0px;
 }
 
+.product-section {
+    margin: 0 auto;
+    width: 90%;
+    margin-top: 2rem;
+}
+
 .product {
+    position: relative;
+    width: 10%;
+    border: 1px solid #0003;
+    padding: 2rem;
+    text-align: center;
+}
+
+.product p{
+    padding: 1rem;
+    font-size: 1.5rem;
+}
+
+.image {
+    margin: 0 auto;
+    position: relative;
     width: 150px;
     height: 250px;
-    background-color: red
+    background-color: aqua;
 }
