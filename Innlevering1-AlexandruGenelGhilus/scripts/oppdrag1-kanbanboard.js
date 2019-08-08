@@ -2,6 +2,11 @@ $(function () {
 
     ///Add tab elements (tasks)
 
+    $("#settings").click(function () {
+        $("#add-task").toggle();
+        $("#delete-task").toggle();
+    });
+
     $("#add-task").click(function () {
         $("#create-task").html(
             "<h3>Add task</h3>" +
@@ -21,10 +26,10 @@ $(function () {
         $("#confirm-task").click(function () {
 
             var userInput = $("#task-input").val();
-            
-            var setContent = function(input) {
+
+            var setContent = function (input) {
                 var content = "<div class='tab-element'>" +
-                    "<div class='priority'></div>" +
+                    "<div class='frame'></div>" +
                     "<p>" + input + "</p>" +
                     "</div>";
                 return content;
@@ -53,4 +58,20 @@ $(function () {
             $("#create-task").css("display", "none");
         });
     });
+
+    $("#delete-task").click(function () {
+
+        if ($(".tab-element").length == 0) {
+            alert("There are no created tasks");
+        } else {
+            $(".frame").css("background-color", "#FF5354")
+        }
+
+        if ($(".frame").css("background-color", "#FF5354")) {
+            $(".frame").click(function () {
+                $(this).parent().css("display", "none")
+                $(".frame").css({'background-color':''})
+            })
+        }
+    })
 });

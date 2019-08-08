@@ -23,6 +23,7 @@ h1 {
 .tab {
     display: inline-block;
     vertical-align:middle;
+    align-content: center;
     position: relative;
     min-width: 300px;
     min-height: 500px;
@@ -32,11 +33,11 @@ h1 {
 }
 
 #to-do {
-    margin-right: 3em;
+    margin-right: 3rem;
 }
 
 #in-progress {
-    margin-right: 3em;
+    margin-right: 3rem;
 }
 
 h2 {
@@ -56,7 +57,6 @@ h2 {
 }
 
 .tab-content p {
-    text-align: left;
     font-size: 0.9rem;
     user-select: none;
     margin-left: 50px;
@@ -64,27 +64,40 @@ h2 {
 }
 
 .tab-element {
-    padding: 0.5rem;
-    margin-top: 15px;
-    margin-bottom: 5px;
-    margin-right: 5px;
+    position: relative;
+    padding: 0.8rem;
     line-height: normal;
     border-radius: 10px;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    max-width: 90%;
 }
 
 #to-do .tab-element {
     border: 3px solid #00B8D9;
 }
 
+#to-do .frame {
+    background-color: #00B8D9;
+}
+
 #in-progress .tab-element {
     border: 3px solid #FFAB00;
+}
+
+#in-progress .frame {
+    background-color: #FFAB00;
 }
 
 #done .tab-element {
     border: 3px solid #57D9A3;
 }
 
-.priority {
+#done .frame {
+    background-color: #57D9A3;
+}
+
+.frame {
     position: relative;
     float: left;
     width: 20px;
@@ -110,23 +123,52 @@ h2 {
 
 /*Proprieties for the scrollbar END*/
 
-#add-task {
-    display: block;
+.button{
     margin: 0 auto;
     margin-top: 1rem;
+    margin-bottom: 1rem;
     height: 30px;
     width: 30px;
-    background: url(../images/plus.png);
     background-repeat: no-repeat;
     background-size: cover;
     border-radius: 50%;
     background-color: #FFFF;
-    border: 0px solid #FFFF;
+    border: 0;
 }
 
-#add-task:hover {
-    height: 40px;
-    width: 40px;
+#add-task {
+    margin: 1rem;
+    background: url(../images/add.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: none;
+}
+
+#delete-task {
+    margin: 1rem;
+    background: url(../images/round-delete-button.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: none;
+}
+
+#delete-element {
+    margin: 1rem;
+    background: url(../images/round-delete-button.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: none;
+}
+
+#settings {
+    margin: 1rem;
+    background: url(../images/settings.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.button:hover {
+    transform: scale(1.2);
 }
 
 h3 {
@@ -158,61 +200,21 @@ textarea {
 
 /* Small devices */
 @media only screen and (max-width: 600px) {
-    .tab {
-        width: 300px;
-        height: 500px;
-        margin: 0px;
-        margin-bottom: 1rem;
+    #to-do, #in-progress {
+        margin: 0;
+        margin-bottom: 2rem;
     }
-
-    #container {
-        width: 100%;
-        margin-bottom: 4rem;
-    }
-
-    #add-task {
-        margin-bottom: 1rem;
-    }
-
-    .tab-content {
-        height: 370px;
+    
+    .tab, .tab-content {
+        min-height: 350px;
+        min-width: 250px;
     }
 }
 
 /* Medium devices */
 @media only screen and (min-width: 700px) and (max-width: 1200px) {
-    #container {
-        width: 70%;
-
-    }
-
-    .tab {
-        margin: 0;
-        margin-bottom: 1rem;
-        width: 500px;
-    }
-
-    #add-task {
-        margin-bottom: 1rem;
-    }
 }
 
 /* Large devices */
 @media only screen and (min-width: 1200px) and (max-width: 1670px) {
-    .tab {
-        margin: 0px;
-    }
-
-    #to-do,
-    #in-progress {
-        margin-right: 2rem;
-    }
-
-    #done {
-        margin-top: 2rem;
-    }
-
-    #add-task {
-        margin-bottom: 1rem;
-    }
 }
