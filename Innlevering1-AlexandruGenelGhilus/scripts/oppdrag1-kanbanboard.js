@@ -46,9 +46,7 @@ $(function () {
 
             $(".tab-content").sortable({
                 revert: true,
-                helper: "clone",
-                appendTo: 'body',
-                scroll: false,
+                appendTo: 'body'
             });
             $(".tab-element").draggable({
                 connectToSortable: ".tab-content"
@@ -70,7 +68,7 @@ $(function () {
         if ($(".frame").css("background-color", "#FF5354")) {
             $(".frame").click(function () {
                 $(this).parent().css("display", "none")
-                $(".frame").css({'background-color':''})
+                $(".frame").css({'background-color':""})
             })
         }
     })

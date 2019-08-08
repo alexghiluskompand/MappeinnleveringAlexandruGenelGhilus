@@ -25,8 +25,6 @@ h1 {
     vertical-align:middle;
     align-content: center;
     position: relative;
-    min-width: 300px;
-    min-height: 500px;
     background-color: #FFFF;
     border-radius: 20px;
     border: 2px solid #0001;
@@ -49,8 +47,11 @@ h2 {
 }
 
 .tab-content {
-    min-width: 400px;
-    min-height: 700px;
+    min-width: 350px;
+    min-height: 600px;
+    
+    max-width: 400px;
+    max-height: 700px;
     margin: 0 auto;
     margin-top: 2rem;
 
