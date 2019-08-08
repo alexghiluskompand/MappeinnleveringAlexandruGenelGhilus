@@ -1,0 +1,16 @@
+#nav, footer{
+    width: 100%;
+    height: 70px;
+    background: linear-gradient(-90deg, #E77E23, #E84B3E);
+}
+
+footer {
+    position: absolute;
+    bottom: 0px;
+}
+
+.product {
+    width: 150px;
+    height: 250px;
+    background-color: red
+}
