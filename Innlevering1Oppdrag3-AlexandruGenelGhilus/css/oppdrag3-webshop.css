@@ -12,9 +12,9 @@ footer {}
 
 #cart img {
     position: relative;
-    top: 5px;
+    top: 7.5px;
     float: right;
-    height: 60px;
+    height: 55px;
     margin-right: 1rem;
 }
 
@@ -23,15 +23,18 @@ footer {}
 }
 
 #cart img:hover {
-    transform: scale(1.2);
+    transform: scale(1.1);
+}
+
+#container {
+    margin: 0 auto;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
 }
 
 #product-section {
+    width: 67%;
     margin: 0 auto;
-    width: 90%;
-    margin-top: 2rem;
-    margin-bottom: 2rem;
-    overflow: auto;
 }
 
 .product {
@@ -39,7 +42,7 @@ footer {}
     position: relative;
     width: 250px;
     border: 1px solid #0003;
-    padding: 2rem;
+    padding: 1rem;
     margin: 1rem;
     text-align: center;
 }
