@@ -1,11 +1,11 @@
 Vue.component('product', {
     template: `
 <div class="product">
-    <img :src="image" class="image">
+    <img v-bind:src="image" class="image">
     <h2>{{ title }}</h2>
     <p>{{ platform }}</p>
     <p>In stock: {{ stock }} </p>
-    <button v-on:click="stock--">Add to cart</button>
+    <button v-on:click="stock--" v-on:click="increment()">Add to cart</button>
 </div>
 
 `,
@@ -15,15 +15,13 @@ Vue.component('product', {
             image: "images/PS4/uncharted4.jpg",
             stock: 10,
             platform: "Playstation 4",
-            title: "Uncharted 4"
+            title: "Uncharted 4",
         }
     },
 
-    methods: {}
-
-})
-
-var product = new Vue({
-    el: '#product-section',
-    data: {}
+    methods: {
+        increment() {
+            cart++
+        }
+    }
 })

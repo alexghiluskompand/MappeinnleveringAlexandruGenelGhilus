@@ -8,18 +8,23 @@ html {
     background: linear-gradient(-90deg, #E77E23, #E84B3E);
 }
 
-footer {}
+#cart p {
+    position: relative;
+    float: right;
+    top: 7px;
+    background-color: #FFFF;
+    border: 2px solid #FFFF;
+    border-radius: 50%;
+    padding: 0.5rem;
+    margin-right: 1rem;
+}
 
 #cart img {
     position: relative;
     top: 7.5px;
     float: right;
     height: 55px;
-    margin-right: 1rem;
-}
-
-#cart p {
-    float: right
+    margin-right: 0.3rem;
 }
 
 #cart img:hover {
