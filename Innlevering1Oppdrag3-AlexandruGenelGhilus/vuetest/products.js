@@ -7,10 +7,15 @@ Vue.component('productselection', {
         <p>{{ item.platform }}</p>
         <p>In stock: {{ item.stock }} </p>
         <button 
-            v-on:click="item.stock--"
+            @click="addToCart(item)"
             :disabled="item.stock < 1"
             :class="{ disabled: item.stock < 1 }">Add to cart</button>
     </div>
   </div>
   `,
+  methods: {
+    addToCart: (item) => {
+      vm.$root.addToCart(item)
+    }
+  },
 })
