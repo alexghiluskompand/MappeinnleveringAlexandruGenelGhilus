@@ -11,5 +11,4 @@ Vue.component('cart', {
             units: 0
         }
     }
-
 })
