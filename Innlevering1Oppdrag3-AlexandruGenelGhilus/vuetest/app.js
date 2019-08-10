@@ -1,4 +1,4 @@
-var productsection = new Vue({
+var vm = new Vue({
   el: '#container',
   data() {
     return {
@@ -38,7 +38,15 @@ var productsection = new Vue({
             platform: "Playstation 4",
             title: "Shadow of Mordor"
         }
-      ]
+      ],
+      cart: []
+    }
+  },
+  methods: {
+    addToCart: (item) => {
+      vm.cart.push(item.id)
+
+      console.log(vm.cart)
     }
   }
 });
