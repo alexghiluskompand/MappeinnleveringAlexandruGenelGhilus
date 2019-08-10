@@ -39,12 +39,14 @@ var vm = new Vue({
             title: "Shadow of Mordor"
         }
       ],
-      cart: []
+      cart: [],
+      count: 0
     }
   },
   methods: {
     addToCart: (item) => {
       vm.cart.push(item.id)
+      vm.count++
 
       console.log(vm.cart)
     }

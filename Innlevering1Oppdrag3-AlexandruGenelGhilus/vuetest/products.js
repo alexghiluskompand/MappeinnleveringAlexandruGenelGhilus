@@ -1,6 +1,8 @@
 Vue.component('productselection', {
   template: `
   <div class="product-section">
+    <cart></cart>
+
     <div v-for="item in this.$root.products" class="product">
         <img v-bind:src="item.image" class="image">
         <h2>{{ item.title }}</h2>
@@ -16,6 +18,7 @@ Vue.component('productselection', {
   methods: {
     addToCart: (item) => {
       vm.$root.addToCart(item)
+      item.stock--
     }
   },
 })
