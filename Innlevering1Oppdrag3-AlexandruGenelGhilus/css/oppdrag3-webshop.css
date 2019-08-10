@@ -65,7 +65,7 @@ html {
 .image {
     margin: 0 auto;
     position: relative;
-    height: 250px;
+    height: 200px;
     background-color: aqua;
 }
 
@@ -77,6 +77,10 @@ button {
     border: 0px;
     font-size: 1rem;
     font-weight: 600;
+}
+
+.disabled {
+  background-color: #d8d8d8;
 }
 
 button:hover {

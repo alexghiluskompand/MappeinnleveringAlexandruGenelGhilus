@@ -1,7 +1,10 @@
-var product = new Vue({
-    el: '#product-section'
+var productsection = new Vue({
+    el: '#container'
 });
 
 var cart = new Vue({
-    el: '#nav'
+    el: '#nav',
+    data: {
+        cart: []
+    }
 });
