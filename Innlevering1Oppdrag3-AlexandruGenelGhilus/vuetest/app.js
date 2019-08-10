@@ -40,15 +40,28 @@ var vm = new Vue({
         }
       ],
       cart: [],
-      count: 0
+      count: 0,
+      isCartOpen: false
     }
   },
   methods: {
+    openCart() { 
+      vm.isCartOpen = !vm.isCartOpen
+    },
+
     addToCart: (item) => {
       vm.cart.push(item.id)
       vm.count++
 
       console.log(vm.cart)
+    },
+
+    removeItem: (id) => {
+      for(let i = vm.cart.length -1; i >= 0; i--) {
+        if (vm.cart[i] === id) {
+          vm.cart.splice(i, 1)
+        }
+      }
     }
   }
 });

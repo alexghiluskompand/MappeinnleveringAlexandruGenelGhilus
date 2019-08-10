@@ -1,7 +1,7 @@
 Vue.component('productselection', {
   template: `
   <div class="product-section">
-    <cart></cart>
+    <cartComponent></cartComponent>
 
     <div v-for="item in this.$root.products" class="product">
         <img v-bind:src="item.image" class="image">
