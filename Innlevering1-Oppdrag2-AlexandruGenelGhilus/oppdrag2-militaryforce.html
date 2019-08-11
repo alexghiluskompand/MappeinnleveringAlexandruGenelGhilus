@@ -9,15 +9,50 @@
     <meta name="keywords" content="HTML, CSS, JavaScript, Vue, jQuery, QUnit">
     <meta name="author" content="Alexandru Genel Ghilus">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://fonts.googleapis.com/css?family=Lato&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="css/reset.css">
     <link rel="stylesheet" type="text/css" href="css/style.css">
 </head>
 
 <body>
+    <nav>
+        <img src="./images/tank.png" id="tank-img">
+    </nav>
     <div class="container">
-        <div class="addNewMission"></div>
+        <h1>Military Force - Mission Control</h1>
+        <div class="button-section">
+            <button id="add-new-mission" class="button" title="Add Mission"></button>
+            <button id="delete-mission" class="button" title="Delete Mission"></button>
+        </div>
+        <div id="mission-content">
+            <div id='create-mission'>
+                <h2>Add Mission</h2>
+                <h3>Title</h3>
+                <input id='mission-title' class="inputs" name="title">
+                <h3>Date</h3>
+                <input id='mission-date' class="inputs" type='date'>
+                <h3>Information</h3>
+                <textarea id='mission-description'></textarea>
+                <h3>Coordinates</h3>
+                <input class="coordinates-input" id="longitude" type="text" placeholder="N/S" maxlength="1">
+                <input class="coordinates-input" id="longitude-value" type="number" placeholder="Between -90° and 90°"
+                    maxlength="2">
+                <input class="coordinates-input" id="latitude" type="text" placeholder="E/W" maxlength="1">
+                <input class="coordinates-input" id="latitude-value" type="number" placeholder="Between -180° and 180°"
+                    maxlength="3">
+
+                <div id="button-section">
+                    <button id='check'>Check</button>
+                    <button id='cancel'>Cancel</button>
+                </div>
+            </div>
+        </div>
     </div>
     <script src="scripts/jquery-3.4.1.min.js"></script>
     <script src="scripts/jquery-ui-1.12.1/jquery-ui.js"></script>
+    <script src="./scripts/vue.min.js"></script>
     <script src="scripts/main.js"></script>
-</body></html>
+    <script src="./scripts/vue-main.js"></script>
+</body>
+
+</html>
