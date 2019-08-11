@@ -1,19 +1,11 @@
 const func = {
-    errors: 1,
-    title: "",
-    date:"",
-    description:"",
-    NS:"",
-    NSDeg: "",
-    EW:"",
-    EWDeg:"",
 
     returnTitle(input) {
         if (input.val() === "") {
             alert("Please fill in the title of the mission");
             func.errors++;
         } else {
-            title = input.val();
+            return input.val();
         }
     },
 
@@ -51,8 +43,8 @@ const func = {
     },
 
     returnNSDeg(input) {
-        if (input.val() < -90 || input.val() > 90
-        || input.val() == "") {
+        if (input.val() < -90 || input.val() > 90 ||
+            input.val() == "") {
             alert("Enter a valid longitude value");
             func.errors++;
         } else {
@@ -70,8 +62,8 @@ const func = {
     },
 
     returnEWDeg(input) {
-        if (input.val() < -180 || input.val() > 180 
-        || input.val() == "") {
+        if (input.val() < -180 || input.val() > 180 ||
+            input.val() == "") {
             alert("Enter a valid latitude value");
             func.errors++;
         } else {
@@ -100,14 +92,26 @@ $(function () {
         func.returnEW($("#latitude"));
         func.returnEWDeg($("#latitude-value"));
 
-        if(func.errors == 0) {
+        if (func.errors == 0) {
             $("#check").css("display", "none");
             $("#confirm").css("display", "inline");
-        }
-
-        else {
+        } else {
             alert("Please correct all the errors before proceeding");
-            func.errors=1;
+            func.errors = 1;
         }
     });
+
+    $("#test").click(function () {
+        $("#mission-content").append("<div class='mission'><p class='title'>" 
+        + func.returnTitle($("#mission-title")) + "</p>" 
+        + "<p class='date'>" + func.returnDate($("#mission-date")) +"</p>"
+        +"<p class='description'>" + func.returnDescription($("#mission-description")) + "</p>"
+        +"<p class='longitude'>" + func.returnNS($("#longitude")) + "</p>"
+        +"<p class='longitude-value'>" + func.returnNSDeg($("#longitude-value")) + "</p>"
+        +"<p class='latitude'>" + func.returnEW($("#latitude")) + "</p>"
+        +"<p class='latitude-value'>" + func.returnEWDeg($("#latitude-value")) + "</p>"
+        + "</div>"
+        
+        )
+    })
 });
