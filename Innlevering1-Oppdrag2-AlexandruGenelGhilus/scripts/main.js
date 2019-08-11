@@ -1,11 +1,19 @@
 const func = {
     errors: 1,
-    returnInput(input) {
+    title: "",
+    date:"",
+    description:"",
+    NS:"",
+    NSDeg: "",
+    EW:"",
+    EWDeg:"",
+
+    returnTitle(input) {
         if (input.val() === "") {
-            alert("Please fill all fields");
+            alert("Please fill in the title of the mission");
             func.errors++;
         } else {
-            return input.val();
+            title = input.val();
         }
     },
 
@@ -25,7 +33,7 @@ const func = {
     },
 
     returnDescription(input) {
-        if (input.val().length < 20) {
+        if (input.val().length < 20 || input.val() === "") {
             alert("Please enter a vaild description (Min 20 characters)");
             func.errors++;
         } else {
@@ -84,8 +92,7 @@ $(function () {
 
     $("#check").click(function () {
         func.errors = 0;
-        func.returnInput($("#mission-title"));
-        func.returnInput($("#mission-description"));
+        func.returnTitle($("#mission-title"));
         func.returnDate($("#mission-date"));
         func.returnDescription($("#mission-description"));
         func.returnNS($("#longitude"));
@@ -93,9 +100,9 @@ $(function () {
         func.returnEW($("#latitude"));
         func.returnEWDeg($("#latitude-value"));
 
-        if(func.errors == 0) { 
-            $("#button-section").append("<button id='confirm'>Confirm</button>")
-            $("#check").css("display", "none")
+        if(func.errors == 0) {
+            $("#check").css("display", "none");
+            $("#confirm").css("display", "inline");
         }
 
         else {

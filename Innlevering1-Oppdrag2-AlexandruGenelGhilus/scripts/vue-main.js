@@ -1,3 +1,5 @@
 var createMission = new Vue({
-    el: '#mission-content'
+    el: '#missiones',
+    data: {
+    }
   })
