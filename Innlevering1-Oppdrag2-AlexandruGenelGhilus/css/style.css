@@ -8,8 +8,8 @@ nav {
 #tank-img {
     position: relative;
     width: 65px;
-    animation-name: example;
-    animation-duration: 4s;
+    animation-name: easyanimation;
+    animation-duration: 3s;
 }
 
 #container {
@@ -106,10 +106,58 @@ h1 {
     text-align: center;
 }
 
-/*@keyframes example {
+.mission {
+    width: 90%;
+    margin: 0 auto;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    border: 1px solid #4b5320;
+}
+
+.mission p {
+    padding: 1rem;
+}
+
+.title {
+    text-align: center;
+    font-weight: 600;
+    margin: 2rem;
+    background-color: #4b5320;
+    color: #FFFF;
+    border: 1px solid #4b5320;
+}
+
+.date {
+    padding: 0.3rem;
+}
+
+.latitude, .longitude, .latitude-value, .longitude-value {
+    display: inline-block;
+}
+
+.description {
+    padding: 0.3rem;
+    width: 90%;
+    overflow: auto;
+    word-break: break-all;
+}
+
+.delete-this-mission {
+    background: url(../images/clear.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    border: 1px solid #FFFF;
+    width: 30px;
+    height: 30px;
+    float: right;
+    margin: 0.5rem;
+    display: none;
+}
+
+@keyframes easyanimation {
     0%   {left:0px;}
     25%  {left:400px;}
     50%  {left:800px;}
     75%  {left:1200px;}
     100% {left:1800px;}
-  }*/
+  }

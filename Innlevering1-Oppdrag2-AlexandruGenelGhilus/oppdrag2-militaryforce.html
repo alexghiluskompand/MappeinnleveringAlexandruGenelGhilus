@@ -12,6 +12,7 @@
     <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro&display=swap" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="css/reset.css">
     <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="css/qunit-2.9.2.css">
 </head>
 
 <body>
@@ -35,25 +36,23 @@
                 <textarea id='mission-description'></textarea>
                 <h3>Coordinates</h3>
                 <input class="coordinates-input" id="longitude" type="text" placeholder="N/S" maxlength="1">
-                <input class="coordinates-input" id="longitude-value" type="number" placeholder="Between -90° and 90°"
-                    maxlength="2">
+                <input class="coordinates-input" id="longitude-value" type="number" placeholder="Between -90° and 90°" maxlength="2">
                 <input class="coordinates-input" id="latitude" type="text" placeholder="E/W" maxlength="1">
-                <input class="coordinates-input" id="latitude-value" type="number" placeholder="Between -180° and 180°"
-                    maxlength="3">
+                <input class="coordinates-input" id="latitude-value" type="number" placeholder="Between -180° and 180°" maxlength="3">
 
                 <div id="button-section">
                     <button id='check'>Check</button>
                     <button id='confirm' v-on:click="">Confirm</button>
                     <button id='cancel'>Cancel</button>
-                    <button id='test'>test</button>
                 </div>
+            </div>
         </div>
-        <script src="scripts/jquery-3.4.1.min.js"></script>
-        <script src="scripts/jquery-ui-1.12.1/jquery-ui.js"></script>
-        <script src="./scripts/vue.min.js"></script>
-        <script src="scripts/main.js"></script>
-        <script src="./scripts/vue-title.js"></script>
-        <script src="./scripts/vue-main.js"></script>
-</body>
-
-</html>
+    </div>
+    <script src="scripts/jquery-3.4.1.min.js"></script>
+    <script src="scripts/jquery-ui-1.12.1/jquery-ui.js"></script>
+    <script src="./scripts/vue.min.js"></script>
+    <script src="scripts/main.js"></script>
+    <script src="./scripts/vue-title.js"></script>
+    <script src="./scripts/vue-main.js"></script>
+    <script src="scripts/qunit.js"></script>
+</body></html>

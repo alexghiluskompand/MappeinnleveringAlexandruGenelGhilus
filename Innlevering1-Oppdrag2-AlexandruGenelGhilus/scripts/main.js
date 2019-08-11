@@ -101,17 +101,38 @@ $(function () {
         }
     });
 
-    $("#test").click(function () {
-        $("#mission-content").append("<div class='mission'><p class='title'>" 
-        + func.returnTitle($("#mission-title")) + "</p>" 
-        + "<p class='date'>" + func.returnDate($("#mission-date")) +"</p>"
-        +"<p class='description'>" + func.returnDescription($("#mission-description")) + "</p>"
-        +"<p class='longitude'>" + func.returnNS($("#longitude")) + "</p>"
-        +"<p class='longitude-value'>" + func.returnNSDeg($("#longitude-value")) + "</p>"
-        +"<p class='latitude'>" + func.returnEW($("#latitude")) + "</p>"
-        +"<p class='latitude-value'>" + func.returnEWDeg($("#latitude-value")) + "</p>"
-        + "</div>"
-        
-        )
+    $("#confirm").click(function () {
+        $("#mission-content").append("<div class='mission'><p class='title'>" +
+            func.returnTitle($("#mission-title")) + "</p>" +
+            "<p class='date'>" + "Date: " + func.returnDate($("#mission-date")) + "</p>" +
+            "<p class='description'>" + "Description: " + func.returnDescription($("#mission-description")) + "</p>" +
+            "<p class='longitude'>" + "Coordinates: " + func.returnNS($("#longitude")) + "</p>" +
+            "<p class='longitude-value'>" + func.returnNSDeg($("#longitude-value")) + "</p>" +
+            "<p class='latitude'>" + func.returnEW($("#latitude")) + "</p>" +
+            "<p class='latitude-value'>" + func.returnEWDeg($("#latitude-value")) + "</p>" +
+            "<button class='delete-this-mission button'></button>" +
+            "</div>"
+        );
+    });
+
+    $("#delete-mission").click(function () {
+
+        if ($(".mission").length == 0) {
+            alert("There are no created missions");
+        } else {
+            $(".delete-this-mission").css("display", "inline")
+        }
+
+        if ($(".delete-this-mission").css("display", "inline")) {
+            $(".delete-this-mission").click(function () {
+                if(confirm("Are you sure you want to delete this mission?")) {
+                    $(this).parent().remove()
+                }
+                
+                else {
+                    $(".delete-this-mission").css("display", "none")
+                }
+            })
+        }
     })
 });
